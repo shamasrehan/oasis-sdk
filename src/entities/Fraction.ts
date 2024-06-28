@@ -15,14 +15,21 @@ Big.strict = true
 const toSignificantRounding = {
   [Rounding.ROUND_DOWN]: Decimal.ROUND_DOWN,
   [Rounding.ROUND_HALF_UP]: Decimal.ROUND_HALF_UP,
+  [Rounding.ROUND_HALF_EVEN]: Decimal.ROUND_HALF_EVEN,
   [Rounding.ROUND_UP]: Decimal.ROUND_UP,
 }
 
+// const toFixedRounding = {
+//   [Rounding.ROUND_DOWN]: RoundingMode.RoundDown,
+//   [Rounding.ROUND_HALF_UP]: RoundingMode.RoundHalfUp,
+//   [Rounding.ROUND_UP]: RoundingMode.RoundUp,
+// }
 const toFixedRounding = {
-  [Rounding.ROUND_DOWN]: RoundingMode.RoundDown,
-  [Rounding.ROUND_HALF_UP]: RoundingMode.RoundHalfUp,
-  [Rounding.ROUND_UP]: RoundingMode.RoundUp,
-}
+  [Rounding.ROUND_DOWN]: 0, // Round down
+  [Rounding.ROUND_HALF_UP]: 1, // Round half up
+  [Rounding.ROUND_HALF_EVEN]: 2, // Round half even
+  [Rounding.ROUND_UP]: 3, // Round up
+};
 
 export class Fraction {
   public readonly numerator: JSBI

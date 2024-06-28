@@ -3,6 +3,7 @@ export enum ChainId {
   ROPSTEN = 3,
   RINKEBY = 4,
   GÖRLI = 5,
+  SEPOLIA = 11155111,
   KOVAN = 42,
   MATIC = 137,
   MATIC_TESTNET = 80001,
